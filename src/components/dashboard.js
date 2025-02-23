@@ -112,9 +112,7 @@ function Dashboard() {
 
   return (
     <div className="flex bg-gray-100 px-4">
-      {/* Main Section - 70% width */}
       <div className="flex-1 p-4">
-        {/* Top Section (100px height) */}
         <div className="h-24 rounded-md mb-4">
           <div className="w-full h-screen flex flex-col items-center justify-start bg-gray-100">
             <div className="w-full flex flex-wrap justify-start gap-4 overflow-auto">
@@ -132,10 +130,9 @@ function Dashboard() {
           </div>
         </div>
 
-        {/* Bottom Section (350px height) */}
+        {/* Bottom Section */}
         <div className="h-[350px] rounded-md">
           <div className="flex space-x-4 p-4">
-            {/* Graphical Chart (Line Chart) - 60% width */}
             <div className="w-[60%] h-[300px] bg-white rounded-md p-4 shadow-lg">
               <h2 className="mb-4">Total Revenue</h2>
               <ResponsiveContainer width="100%" height="100%">
@@ -150,7 +147,7 @@ function Dashboard() {
               </ResponsiveContainer>
             </div>
 
-            {/* Donut Chart - 40% width */}
+            {/* Donut Chart */}
             <div className="w-[40%] h-[300px] bg-white rounded-md p-4 shadow-lg">
               <h2 className="mb-4">Budget</h2>
               <ResponsiveContainer width="100%" height="80%">
@@ -194,7 +191,6 @@ function Dashboard() {
           <h1 className="text-xl font-bold">Budget Status</h1>
 
           <div className="flex justify-start items-center gap-4">
-            {/* Submit Button */}
             <Button variant="contained" color="primary">
               Add New Project
             </Button>
@@ -213,7 +209,7 @@ function Dashboard() {
                 onChange={handleDateChange}
                 dateFormat="yyyy/MM/dd"
                 placeholderText="Select a date"
-                className="border p-2 rounded-md" // Styling the date picker
+                className="border p-2 rounded-md" 
               />
             </div>
 
@@ -224,7 +220,7 @@ function Dashboard() {
           </div>
         </div>
 
-        {/* New Section Below the Budget Status */}
+        {/* Project Details */}
         <div className="h-[200px] w-full mt-4 flex overflow-auto">
           {projects.map((project, index) => (
             <ProjectCard
@@ -239,9 +235,8 @@ function Dashboard() {
         </div>
       </div>
 
-      {/* Sidebar - 30% width */}
+      {/* Sidebar profile viewer */}
       <div className="w-[150px] h-[480px] text-white flex flex-col items-center justify-center p-4">
-        {/* Profile Section */}
         <div className="bg-white text-black w-full h-full flex flex-col items-center justify-center rounded-md shadow-lg">
           {["Praneeth", "Koushik", "Vishwa", "Nishant"].map((item, index) => (
             <div key={index} className="flex flex-col items-center mb-6">
